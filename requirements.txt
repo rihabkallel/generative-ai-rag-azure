@@ -1,0 +1,5 @@
+openai
+requests
+azure-core
+azure-search-documents
+python-dotenv

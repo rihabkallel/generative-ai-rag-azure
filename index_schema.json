@@ -1,0 +1,257 @@
+{
+    "@odata.context": "https://<<YOUR_AZURE_SEARCH_AI_ENDPOINT>>/$metadata#indexes/$entity",
+    "@odata.etag": "\"0x8DC9843255504B2\"",
+    "name": "YOUR_INDEX_NAME",
+    "defaultScoringProfile": null,
+    "fields": [
+        {
+            "name": "id",
+            "type": "Edm.String",
+            "searchable": true,
+            "filterable": true,
+            "retrievable": true,
+            "stored": true,
+            "sortable": true,
+            "facetable": true,
+            "key": true,
+            "indexAnalyzer": null,
+            "searchAnalyzer": null,
+            "analyzer": null,
+            "normalizer": null,
+            "dimensions": null,
+            "vectorSearchProfile": null,
+            "vectorEncoding": null,
+            "synonymMaps": []
+          },
+      {
+        "name": "content",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": true,
+        "retrievable": true,
+        "stored": true,
+        "sortable": true,
+        "facetable": true,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "vectorEncoding": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "filepath",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": true,
+        "retrievable": true,
+        "stored": true,
+        "sortable": true,
+        "facetable": true,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "vectorEncoding": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "product",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": true,
+        "retrievable": true,
+        "stored": true,
+        "sortable": true,
+        "facetable": true,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "vectorEncoding": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "domain",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": true,
+        "retrievable": true,
+        "stored": true,
+        "sortable": true,
+        "facetable": true,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "vectorEncoding": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "pageurl",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": true,
+        "retrievable": true,
+        "stored": true,
+        "sortable": true,
+        "facetable": true,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "vectorEncoding": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "chunk_id",
+        "type": "Edm.String",
+        "searchable": false,
+        "filterable": false,
+        "retrievable": true,
+        "stored": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "vectorEncoding": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "last_updated",
+        "type": "Edm.String",
+        "searchable": false,
+        "filterable": false,
+        "retrievable": true,
+        "stored": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "vectorEncoding": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "contentVector",
+        "type": "Collection(Edm.Single)",
+        "searchable": true,
+        "filterable": false,
+        "retrievable": true,
+        "stored": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": 1536,
+        "vectorSearchProfile": "default",
+        "vectorEncoding": null,
+        "synonymMaps": []
+      }
+    ],
+    "scoringProfiles": [],
+    "corsOptions": {
+      "allowedOrigins": [
+        "*"
+      ],
+      "maxAgeInSeconds": 300
+    },
+    "suggesters": [],
+    "analyzers": [],
+    "normalizers": [],
+    "tokenizers": [],
+    "tokenFilters": [],
+    "charFilters": [],
+    "encryptionKey": null,
+    "similarity": {
+      "@odata.type": "#Microsoft.Azure.Search.BM25Similarity",
+      "k1": null,
+      "b": null
+    },
+    "semantic": {
+      "defaultConfiguration": null,
+      "configurations": [
+        {
+          "name": "default",
+          "prioritizedFields": {
+            "titleField": {
+              "fieldName": "product"
+            },
+            "prioritizedContentFields": [
+              {
+                "fieldName": "content"
+              }
+            ],
+            "prioritizedKeywordsFields": []
+          }
+        }
+      ]
+    },
+    "vectorSearch": {
+      "algorithms": [
+        {
+          "name": "default",
+          "kind": "hnsw",
+          "hnswParameters": {
+            "metric": "cosine",
+            "m": 4,
+            "efConstruction": 400,
+            "efSearch": 1000
+          },
+          "exhaustiveKnnParameters": null
+        }
+      ],
+      "profiles": [
+        {
+          "name": "default",
+          "algorithm": "default",
+          "vectorizer": "default",
+          "compression": null
+        }
+      ],
+      "vectorizers": [
+        {
+          "name": "default",
+          "kind": "azureOpenAI",
+          "azureOpenAIParameters": {
+            "resourceUri": "https://<<YOUR_AZURE_OPEN_AI_ENDPOINT>>",
+            "deploymentId": "<<YOUR_EMBEDDING_MODEL_DEPLOYMENT_id>>",
+            "apiKey": null,
+            "modelName": "<<YOUR_EMBEDDING_MODEL_NAME>>",
+            "authIdentity": null
+          },
+          "customWebApiParameters": null,
+          "aiServicesVisionParameters": null,
+          "amlParameters": null
+        }
+      ],
+      "compressions": []
+    }
+  }
